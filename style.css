@@ -82,6 +82,16 @@ div.section:nth-child(2) {
     font-size: 56px;
 }
 
+.spacer::after {
+    content: '?';
+    display: block;
+    text-align: center;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 6rem;
+    padding: 4rem;
+}
+
+
 .arrow::after {
     content: '↓';
     display: block;
@@ -119,9 +129,9 @@ div.section:nth-child(2) {
 .message {
     height: fit-content;
     transition: height 1s, opacity 5s;
-    background: wheat;
+    background: beige;
     padding: 0.5rem 0.2rem;
-    border: 4px dotted antiquewhite;
+    border: 4px dotted goldenrod;
     border-radius: 12px;
 }
 
@@ -149,6 +159,10 @@ img.cat:nth-child(3) {
     z-index: 3;
 }
 
+.pigeon {
+    width: 50%;
+    margin: 0 auto;
+}
 
 
 img.cat:nth-child(4) {
@@ -177,7 +191,7 @@ img.cat:nth-child(4) {
     border-radius: 15px;
     box-shadow: 0px 0px 12px -4px gray;
     opacity: 1;
-    transition: opacity 0.2s , height 0.2s;
+    transition: opacity 0.2s, height 0.2s;
     z-index: 12;
 }
 
@@ -228,6 +242,67 @@ img.cat:nth-child(4) {
 }
 
 
+
+
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.full-height {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.full-height header {
+    font-size: 3rem;
+}
+
+.barbie {
+    font-size: 2rem;
+}
+
+.barbie::before {
+    content: "You are my";
+    display: block;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.barbie::after {
+    content: "and always will be";
+    display: block;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+
+div.full-height:nth-child(20) {
+    align-content: space-around;
+}
+
+
+#answer
+{
+    padding: 1rem 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.footer.section {
+    background: beige;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
 
 
 
