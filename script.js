@@ -24,6 +24,10 @@ function showMessage(event) {
     }
 }
 
+//Logic to mew the cat
+const cats = document.querySelectorAll('.cat');
+cats.forEach(cat => cat.addEventListener('click',()=>alert('mew')));
+
 
 
 

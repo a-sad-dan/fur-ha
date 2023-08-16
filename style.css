@@ -49,6 +49,9 @@ body {
 
 .section {
     height: 100vh;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -134,6 +137,7 @@ div.section:nth-child(2) {
 .cat {
     width: 50%;
     position: relative;
+    cursor: pointer;
 }
 
 img.cat:nth-child(2) {
@@ -184,9 +188,9 @@ img.cat:nth-child(4) {
 
 
 .canvas>img:nth-child(2) {
-    bottom: 0;
     left: 0;
-    transform: translate(-20%, 48%);
+    bottom: 20%;
+    transform: translate(-50%, 30%);
 }
 
 .canvas>img:nth-child(3) {
