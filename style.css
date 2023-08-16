@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&display=swap');
-html
-{
+
+html {
     overflow-x: hidden;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -10,10 +11,10 @@ html
 }
 
 body {
-    overflow-x: hidden;
     font-family: 'Caveat';
     font-weight: 500;
     background-color: #FFFDED;
+    color: #2e2e2e;
 }
 
 .absolute {
@@ -50,14 +51,21 @@ body {
     height: 100vh;
 }
 
+
 .section:not(:nth-child(1)) {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: 3.5rem;
     align-content: space-around;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
+    padding: 1rem;
+    height: fit-content;
+}
+
+div.section:nth-child(2) {
+    height: 100vh;
 }
 
 .hero header {
@@ -75,7 +83,7 @@ body {
     content: '↓';
     display: block;
     text-align: center;
-    font-family: 'Caveat Brush',cursive;
+    font-family: 'Caveat Brush', cursive;
 }
 
 .graphics {
@@ -96,6 +104,25 @@ body {
     bottom: 0px;
     width: 100%;
     z-index: 5;
+}
+
+
+.character {
+    height: 250px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.message {
+    height: fit-content;
+    transition: height 1s, opacity 5s;
+}
+
+.collapsed {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 2s, opacity 2s;
 
 }
 
@@ -103,9 +130,15 @@ body {
 
 
 
-.sub-head
-{
+
+
+
+.sub-head {
     font-size: 2rem;
+}
+
+.message {
+    font-size: 25px;
 }
 
 /* Media query for larger screens */
