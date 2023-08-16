@@ -25,8 +25,22 @@ function showMessage(event) {
 }
 
 //Logic to mew the cat
+
+const catMessages = ['meoww meoww', '*purrs*','*claws at you*','we think it will last','thank you farha','that felt nice','i loved that','pls do some more','owie','*sleeps*','scratch my ears pls','myau','mewww','*stretches*']
+
 const cats = document.querySelectorAll('.cat');
-cats.forEach(cat => cat.addEventListener('click',()=>alert('mew')));
+cats.forEach((cat, index) => cat.addEventListener('click', () => catSays()));
+
+function catSays() {
+    const message = catMessages[Math.floor(Math.random()*catMessages.length)]
+    const modal = document.querySelector('.cat.modal');
+    modal.textContent = message;
+    modal.classList.remove('hidden');
+
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 1000);
+}
 
 
 
