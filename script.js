@@ -1,3 +1,4 @@
+// TO reveal the messages
 const characterButtons = document.querySelectorAll('.character');
 characterButtons.forEach(Element => Element.addEventListener('click', showMessage));
 
@@ -7,19 +8,22 @@ function showMessage(event) {
 
     const messageCopy = message.textContent;
 
-    message.textContent = '';
     message.classList.toggle('collapsed');
     let currentIndex = 0;
-    
-    typeOutText();
+    if (!message.classList.contains('collapsed')) {
+        message.textContent = '';
+        typeOutText();
+        event.target.scrollIntoView({ behavior: "smooth" })
+    }
     function typeOutText() {
         if (currentIndex < messageCopy.length) {
             message.textContent += messageCopy[currentIndex];
             currentIndex++;
             setTimeout(typeOutText, 20);
         }
-        message.scrollIntoView({behavior:"smooth"})
     }
 }
+
+
 
 

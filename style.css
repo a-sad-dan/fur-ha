@@ -116,7 +116,12 @@ div.section:nth-child(2) {
 .message {
     height: fit-content;
     transition: height 1s, opacity 5s;
+    background: wheat;
+    padding: 0.5rem 0.2rem;
+    border: 4px dotted antiquewhite;
+    border-radius: 12px;
 }
+
 
 .collapsed {
     height: 0;
@@ -126,19 +131,86 @@ div.section:nth-child(2) {
 
 }
 
+.cat {
+    width: 50%;
+    position: relative;
+}
+
+img.cat:nth-child(2) {
+    left: 50%;
+}
+
+img.cat:nth-child(3) {
+    top: -70px;
+}
+
+
+
+img.cat:nth-child(4) {
+    top: -100px;
+    left: 100%;
+    transform: translate(-100%, 0);
+    rotate: 10deg;
+    width: 75%;
+}
 
 
 
 
 
 
+
+
+
+
+.canvas {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    position: relative;
+}
+
+.canvas>img:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: translate(-20%, 0%);
+}
+
+
+.canvas>img:nth-child(2) {
+    bottom: 0;
+    left: 0;
+    transform: translate(-20%, 48%);
+}
+
+.canvas>img:nth-child(3) {
+    right: 0;
+    transform: translate(40%, -20%);
+}
+
+.poem {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
 
 .sub-head {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 .message {
     font-size: 25px;
+}
+
+header {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 32px;
+    padding: 2rem 0;
 }
 
 /* Media query for larger screens */
