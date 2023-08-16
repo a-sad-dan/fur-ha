@@ -8,6 +8,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,10 +16,20 @@ body {
     font-weight: 500;
     background-color: #FFFDED;
     color: #2e2e2e;
+    transition: background-color 1s ease-in-out;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.no-scroll
+{
+    overflow: hidden;
 }
 
 .absolute {
     position: absolute;
+    opacity: 1;
+    transition: opacity 2s;
 }
 
 .sun {
@@ -27,23 +38,29 @@ body {
 
 .flower.f1 {
     top: 16vh;
-    transform: translateX(-50%);
+    left: 0;
+    /* transform: translateX(-50%); */
+    margin-left: -14%;
 }
 
 .flower.f2 {
     right: 0;
-    transform: translate(40%, 15%);
+    /* transform: translate(40%, 15%); */
+    top: 0;
+    margin-right: -14%;
+    margin-top: -6%;
 }
 
 .flower.f3 {
-    top: 50vh;
     right: 0;
-    transform: translate(45%, -50%) rotate(30deg);
+    top: 46vh;
+    margin-right: -10%;
+    /* transform: translate(45%, -50%) rotate(30deg); */
 }
 
 .birds {
     right: 20vw;
-    top: 15vh;
+    top: 8vh;
     rotate: -10deg;
 }
 
@@ -54,6 +71,41 @@ body {
     position: relative;
 }
 
+.pre-answer {
+    font-size: 1.4rem;
+    padding: 0 2.4rem;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.final-answer {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 56px;
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
+}
+
+.post-answer {
+    opacity: 0;
+    font-size: 1.4rem;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in
+{
+    opacity: 1;
+}
+
+.answer {
+    height: 50vh;
+    display: grid;
+    text-align: center;
+    align-content: end;
+    padding: 2rem 2rem;
+    gap: 0.2rem;
+    position: relative;
+    z-index: 19;
+}
 
 .section:not(:nth-child(1)) {
     display: flex;
@@ -80,7 +132,14 @@ div.section:nth-child(2) {
     justify-content: center;
     font-family: 'Caveat Brush', cursive;
     font-size: 56px;
+    transition: opacity 1s ease-in-out;
 }
+
+.fade-away {
+    opacity: 0;
+}
+
+
 
 .spacer::after {
     content: '?';
@@ -110,6 +169,7 @@ div.section:nth-child(2) {
     bottom: 0px;
     z-index: 1;
     width: 100%;
+    transition: filter 1.5s ease-in, opacity 1s ease-in-out;
 }
 
 .bench {
@@ -220,19 +280,24 @@ img.cat:nth-child(4) {
 .canvas>img:nth-child(1) {
     top: 0;
     left: 0;
-    transform: translate(-20%, 0%);
+    /* transform: translate(-20%, 0%); */
+    margin-left: -10%;
 }
 
 
 .canvas>img:nth-child(2) {
     left: 0;
-    bottom: 20%;
-    transform: translate(-50%, 30%);
+    bottom: 15%;
+    margin-left: -10%;
+    /* transform: translate(-50%, 30%); */
+
 }
 
 .canvas>img:nth-child(3) {
     right: 0;
-    transform: translate(40%, -20%);
+    /* transform: translate(40%, -20%); */
+    top: 0;
+    margin-right: -14%;
 }
 
 .metro {
@@ -290,8 +355,7 @@ div.full-height:nth-child(20) {
 }
 
 
-#answer
-{
+#answer-link {
     padding: 1rem 0;
     cursor: pointer;
     user-select: none;
@@ -304,6 +368,9 @@ div.full-height:nth-child(20) {
     font-size: 1.2rem;
 }
 
+a.answer-link {
+    color: unset;
+}
 
 
 /* typography  */
