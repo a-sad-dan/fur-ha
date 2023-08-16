@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="hero section">
+    <div class="hero section" id="hero">
 
         <img src="assets/hero/sun.svg" alt="" class="sun absolute">
         <img src="assets/hero/birds.svg" alt="" class="birds absolute">
@@ -19,7 +19,9 @@
         <img src="assets/hero/red-flower.svg" alt="" class="flower f2 absolute">
         <img src="assets/hero/red-flower.svg" alt="" class="flower f3 absolute">
 
-        <header class="arrow">Will this last?</header>
+        <div class="answer">
+            <header class="arrow">Will this last?</header>
+        </div>
         <div class="graphics">
             <img src="assets/hero/trees.svg" alt="trees" class="trees">
             <img src="assets/hero/benches.svg" alt="benches" class="bench">
@@ -104,9 +106,9 @@
     <div class="section">
         <p class="sub-head arrow">Does this poem hold the answer?</p>
         <div class="canvas">
-            <img src="assets/others/daisy.svg" alt="" class="absolute">
-            <img src="assets/others/red-flower.svg" alt="" class="absolute">
-            <img src="assets/others/red-flower.svg" alt="" class="absolute">
+            <img src="assets/others/daisy.svg" alt="" class="absolute flower1">
+            <img src="assets/others/red-flower.svg" alt="" class="absolute flower2">
+            <img src="assets/others/red-flower.svg" alt="" class="absolute flower3">
             <div class="heading">The Canvas of You</div>
             <p class="poem">
                 You are just the right amount of crazy<br>
@@ -194,19 +196,22 @@
 
     <div class="full-height">
         <header>What matters is</header>
+        <audio src="assets/audios/im-yours.mp3" id="im-yours"></audio>
         <div class="barbie"><img src="assets/others/barbie.svg" alt="" class="barbie">girl</div>
     </div>
 
 
 
-    <div class="full-height">But the question still remains</div>
+    <div class="full-height">But the question still remains<br>.<br>Will this last?</div>
     <div class="section">
-        <p id="answer" class="sub-head">Tap me to Find out</p>
+        <a class=answer-link href="#hero">
+            <p id="answer" class="sub-head">Find out</p>
+        </a>
     </div>
 
     <div class="footer section">
         <p>
-            made with &lt3 by Dan 
+            made with &lt3 by Dan
         </p>
     </div>
 
