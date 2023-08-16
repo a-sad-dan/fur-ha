@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&display=swap');
+html
+{
+    overflow-x: hidden;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Caveat';
+    font-weight: 500;
+    background-color: #FFFDED;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sun {
+    transform: translate(-20%, -41%);
+}
+
+.flower.f1 {
+    top: 16vh;
+    transform: translateX(-50%);
+}
+
+.flower.f2 {
+    right: 0;
+    transform: translate(40%, 15%);
+}
+
+.flower.f3 {
+    top: 50vh;
+    right: 0;
+    transform: translate(45%, -50%) rotate(30deg);
+}
+
+.birds {
+    right: 20vw;
+    top: 15vh;
+    rotate: -10deg;
+}
+
+.section {
+    height: 100vh;
+}
+
+.section:not(:nth-child(1)) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 3.5rem;
+    align-content: space-around;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero header {
+    height: 50vh;
+    display: grid;
+    /* position: relative; */
+    /* z-index: 10; */
+    align-content: end;
+    justify-content: center;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 56px;
+}
+
+.arrow::after {
+    content: '↓';
+    display: block;
+    text-align: center;
+    font-family: 'Caveat Brush',cursive;
+}
+
+.graphics {
+    height: 50vh;
+    position: relative;
+    width: 100%;
+}
+
+.trees {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.bench {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 5;
+
+}
+
+
+
+
+
+.sub-head
+{
+    font-size: 2rem;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
