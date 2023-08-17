@@ -18,7 +18,6 @@ body {
     color: #2e2e2e;
     transition: background-color 1s ease-in-out;
     height: 100vh;
-    overflow-y: scroll;
 }
 
 .no-scroll
@@ -39,13 +38,11 @@ body {
 .flower.f1 {
     top: 16vh;
     left: 0;
-    /* transform: translateX(-50%); */
     margin-left: -14%;
 }
 
 .flower.f2 {
     right: 0;
-    /* transform: translate(40%, 15%); */
     top: 0;
     margin-right: -14%;
     margin-top: -6%;
@@ -55,7 +52,6 @@ body {
     right: 0;
     top: 46vh;
     margin-right: -10%;
-    /* transform: translate(45%, -50%) rotate(30deg); */
 }
 
 .birds {
@@ -282,6 +278,7 @@ img.cat:nth-child(4) {
     left: 0;
     /* transform: translate(-20%, 0%); */
     margin-left: -10%;
+    transform: none;
 }
 
 

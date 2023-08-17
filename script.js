@@ -60,24 +60,37 @@ function metroSays() {
 function rotateElements(name, factor) {
     window.addEventListener("scroll", function () {
         const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const rotationDegrees = factor * scrollPercentage; // Adjust as needed
-        const rotatingImage = document.querySelector(`.${name}`);
+        
+        const rotationDegrees = factor * scrollPercentage;
+        const rotatingImage = document.querySelector(`${name}`);
+
+        
         if (isElementInViewport(rotatingImage)) {
-            rotatingImage.style.transform = `rotate(${rotationDegrees}deg)`;
+        rotatingImage.style.transform = `rotate(${rotationDegrees}deg)`;
         }
     });
 }
 
 
+// Rotating hero flowers
+rotateElements('.flower.f1', 1800);
+rotateElements('.flower.f2', -5800);
+rotateElements('.flower.f3', 1900);
+
+
+
 // Rotating flowers
-rotateElements('flower1', 2800)
-rotateElements('flower2', -2800)
-rotateElements('flower3', 2900)
+rotateElements('.flower1', 2800);
+rotateElements('.flower2', -2800);
+rotateElements('.flower3', 2900);
+
+
+rotateElements('.pigeon',10000)
 
 //Rotating fruits
-rotateElements('fruits:nth-child(1)', 1500);
-rotateElements('fruits:only-child', 1000);
-rotateElements('fruits:nth-child(2)', -1800);
+rotateElements('.fruits:nth-child(1)', 1500);
+rotateElements('.fruits:only-child', 1000);
+rotateElements('.fruits:nth-child(2)', -1800);
 
 document.querySelectorAll('.fruits').forEach(fruit => fruit.addEventListener('click', () => writeToModal('i donno anythign', 900)));
 document.querySelector('.dog').addEventListener('click', () => writeToModal('wooof woof i donno anything', 800))
@@ -124,9 +137,9 @@ answer.addEventListener('click', () => {
                                     setTimeout(() => {
                                         removePostAnswer();
                                         setTimeout(() => {
-                                            document.documentElement.innerHTML ='';
+                                            document.documentElement.innerHTML = '';
                                         }, 15000);
-                                    },7400);
+                                    }, 7400);
                                 }, 6400);
                             }, 5400);
                         }, 4700);
@@ -236,3 +249,4 @@ function showAnswer() {
         document.querySelector('.post-answer').classList.add('fade-in');
     }, 3600);
 }
+
