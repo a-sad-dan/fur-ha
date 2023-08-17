@@ -64,7 +64,6 @@ function rotateElements(name, factor) {
         const rotationDegrees = factor * scrollPercentage;
         const rotatingImage = document.querySelector(`${name}`);
 
-        
         if (isElementInViewport(rotatingImage)) {
         rotatingImage.style.transform = `rotate(${rotationDegrees}deg)`;
         }
@@ -114,6 +113,7 @@ const music = document.querySelector('#im-yours')
 // part 1 - music
 const answer = document.querySelector('#answer');
 answer.addEventListener('click', () => {
+    music.currentTime = 50;
     music.play();
     setTimeout(() => {
         fadeElement(question);
@@ -136,9 +136,6 @@ answer.addEventListener('click', () => {
                                     fadeSun();
                                     setTimeout(() => {
                                         removePostAnswer();
-                                        setTimeout(() => {
-                                            document.documentElement.innerHTML = '';
-                                        }, 15000);
                                     }, 7400);
                                 }, 6400);
                             }, 5400);
